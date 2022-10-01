@@ -20,13 +20,13 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
 const Services = () => (
   <div className="flex w-full justify-center items-center gradient-bg-services">
     <div className="flex md:flex-row flex-col items-center justify-between md:p-10 px-4">
-      <div className="flex-1 flex flex-col text-center justify-start items-start">
-        <h1 className="text-white text-center text-3xl sm:text-4xl md:w-9/12 w-11/12 sm:w-96 text-gradient ">
+      <div className="flex-1 flex flex-col text-center justify-start items-center">
+        <h1 className="text-white text-center text-3xl sm:text-4xl md:w-9/12 w-11/12 sm:w-full text-gradient ">
           Services that we
           <br />
           continue to improve
         </h1>
-        <p className="text-center my-4 text-white font-light md:w-9/12 w-11/12 text-base">
+        <p className="text-center my-4 text-white font-light sm:w-full md:w-9/12 w-11/12 text-base">
         A customer is the most important visitor on our premises,<br/>Easy way to buy or sell your crypto !!
         </p>
       </div>
