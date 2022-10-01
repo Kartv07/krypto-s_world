@@ -1,7 +1,7 @@
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 import logo from "../../../logo.png";
+import git from "../../../gitf.png";
+import linkedin from "../../../link.webp";
 
 const Footer = () => (
   <div className="w-full flex md:justify-center justify-between items-center flex-col p-2 gradient-bg-footer">
@@ -18,8 +18,8 @@ const Footer = () => (
       <p className="text-white text-sm text-center pd-0 font-semibold">Come join us and hear for the unexpected miracle</p>
       <p className="text-white text-sm text-center font-medium mt-1">krypto'swallet@gmail.com</p>
       <div className="sm:w-[90%] w-full flex justify-center items-center" >
-      <a href="https://www.linkedin.com/in/kartavya-panthi" target="_blank" className="text-white text-left text-4xl px-2" ><FontAwesomeIcon icon={faLinkedin} /></a>
-      <a href="https://github.com/Kartv07/krypto_world" target="_blank" className="text-white text-right text-4xl px-2" ><FontAwesomeIcon icon={faGithub} /></a>
+      <a href="https://www.linkedin.com/in/kartavya-panthi" target="_blank" className="text-white text-left text-4xl px-2" ><img src={linkedin} className="w-10 h-10 rounded-sm m-2"></img></a>
+      <a href="https://github.com/Kartv07/krypto_world" target="_blank" className="text-white text-right text-4xl px-2" ><img src={git} className="w-10 h-10 rounded-sm "></img></a>
       </div>
     </div>
 
