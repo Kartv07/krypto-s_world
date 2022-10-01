@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import { SiEthereum } from "react-icons/si";
-import { BsInfoCircle } from "react-icons/bs";
 
 import { TransactionContext } from "../context/TransactionContext";
-import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
 import eth from '../../../eth.jpg';
@@ -78,7 +75,7 @@ const Welcome = () => {
 
         <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
           <img src={eth} className="flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-2" />
-        
+          
           <div className="p-5 mt-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Receiver Address" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
