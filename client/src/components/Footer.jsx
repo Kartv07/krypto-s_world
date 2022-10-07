@@ -4,7 +4,7 @@ import git from "../../../gitf.png";
 import linkedin from "../../../link.webp";
 
 const Footer = () => (
-  <div className="w-full flex md:justify-center justify-between items-center flex-col p-2 gradient-bg-footer">
+  <div className="w-full flex md:justify-center justify-between items-center flex-col p-2 gradient-bg-footer" id="About">
     <div className="w-full flex sm:flex-row flex-col justify-between items-center">
     <div className="sm:w-[40%] wrapper flex items-center w-full h-[0.25px] bg-gray-200   " />
       <div className="flex flex-[1.5] justify-center items-center">
