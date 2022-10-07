@@ -4,9 +4,15 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import logo from "../../../logo.png";
 
-const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
-);
+const NavBarItem = ({title, classProps}) => {
+  return (
+      <a href={`#${title}`}>
+      <li className={`mx-4 cursor-pointer ${classProps}`} >
+          {title}
+      </li>
+      </a>
+  );
+}
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -16,14 +22,15 @@ const Navbar = () => {
       <div className="md:flex-[0.5] flex-initial  flex-row sm:px-10 justify-center items-center">
         <img src={logo} alt="logo" className="w-40 cursor-pointer" />
       </div>
-      <ul className="text-white md:flex hidden list-none flex-row justify-between items-center  flex-initial">
-        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
-          <NavBarItem key={item + index} title={item} />
-        ))}
+      <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+      {["About", "Transactions","Tutorial",].map((item, index) => (
+            <NavBarItem key={item + index} title={item}/>
+      ))}
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          Login / Sign up
+          <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank" > Install Metamask</a> 
         </li>
       </ul>
+
       <div className="flex relative">
         {!toggleMenu && (
           <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
@@ -37,7 +44,7 @@ const Navbar = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Market", "Exchange", "Tutorials", "Wallets"].map(
+            {["About", "Transactions", "Tutorials"].map(
               (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
             )}
           </ul>
